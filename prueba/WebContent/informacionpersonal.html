@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <title>Información Personal</title>
+</head>
+<body>
+	<form>
+	<label for="firstname">Nombre</label><input type="text" name="newcv" id="firstname" value="firstname">
+	<lable for="lastname">Apellidos</lable><input type="text" name="newcv" id="lastname" value="lastname">
+	<lable for="adress">Dirección</lable><input type="text" name="newcv" id="adress" value="adress">
+	<lable for="postalcode">Código Postal</lable><input type="number" name="newcv" id="postalcode" value="postalcode">
+	<lable for="location">Localidad</lable><input type="text" name="newcv" id="location" value="location">
+	<lable for="lastname">Apellidos</lable><input type="text" name="newcv" id="lastname" value="lastname">
+	<lable for="country">País</lable>
+	<select name="newcv" id="country" value="country">
+  		<option value="spain">España</option>
+  		<option value="france">Francia</option>
+  		<option value="england">Inglaterra</option>
+  		<option value="germany">Alemania</option>
+	</select>
+	<label for="phone">Teléfono(s)</label>
+	<select name="newcv" id="phonetype" value="phonetype">
+  		<option value="home">Domicilio</option>
+  		<option value="work">Trabajo</option>
+  		<option value="mobile">Móvil</option>
+	</select>
+	<input type="tel" name="newcv" id="phone" value="phone">
+
+	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
+
+	<lable for="email">email</lable><input type="email" name="newcv" id="email" value="email">
+	<lable for="web">Página web / Blog</lable><input type="url" name="newcv" id="web" value="web">
+
+	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
+
+	<label for="message">Mensajería Instantánea</label>
+	<select name="newcv" id="messagetype" value="messagetype">
+  		<option value="google">Google Hangouts</option>
+  		<option value="skype">Skype</option>
+  		<option value="msn">MSN</option>
+	</select>
+	<input type="text" name="newcv" id="message" value="message">
+
+	<label for="complementary">Campos Complementarios</label><input type="checkbox" name="newcv" id="complementary" value="complementary">
+
+	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
+
+	<p id="extra" style="display:none">
+		<div id="attentiontext1">Completar sólo si es necesario. Verifique las disposiciones locales con respecto a datos como edad, sexo, nacionalidad, etc. en el CV.</div>
+		<fieldset>
+			<legend>Sexo</legend>
+			<label for="men" name="newcv" id="men" value="men">Masculino</label><input type="radio" name="newcv" id="men" value="men">
+			<label for="women" name="newcv" id="women" value="women">Femenino</label><input type="radio" name="newcv" id="women" value="women">
+			<label for="other" name="newcv" id="other" value="other">Otro</label><input type="radio" name="newcv" id="other" value="other">
+		</fieldset>
+		<label for="birthdate" name="newcv" id="birthdate" value="birthdate">Fecha de nacimiento</label><input type="date" name="newcv" id="birthdate" value="birthdate">
+		<label for="nationality" name="newcv" id="nationality" value="nationality">Nacionalidad</label>
+		<select name="newcv" id="nationality" value="nationality">
+  		<option value="spanish">Española</option>
+  		<option value="english">Inglesa</option>
+  		<option value="german">Alemana</option>
+	</select>
+
+	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
+
+	</p>
+
+
+
+	<input type="submit" value="Enviar">
+
+
+	
+	</form>
+		
+</body>
+</html>

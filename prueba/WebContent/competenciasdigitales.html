@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <title>Competencias Digitales</title>
+</head>
+<body>
+	<form>
+	
+	<fieldset>
+		<legend>Autoevaluación</legend>
+
+		<label for="infotreatment">Tratamiento de la Información</label>
+		<select name="ability" id="infotreatment" value="infotreatment">
+  		<option value="1">Usuario Básico</option>
+  		<option value="2">Usuario Independiente</option>
+  		<option value="3">Usuario Competente</option>
+
+		</select>
+
+		<label for="communication">Comunicación</label>
+		<select name="ability" id="communication" value="communication">
+  		<option value="1">Usuario Básico</option>
+  		<option value="2">Usuario Independiente</option>
+  		<option value="3">Usuario Competente</option>
+
+		</select>
+
+		<label for="contentcreation">Creación de Contenido</label>
+		<select name="ability" id="contentcreation" value="contentcreation">
+  		<option value="1">Usuario Básico</option>
+  		<option value="2">Usuario Independiente</option>
+  		<option value="3">Usuario Competente</option>
+
+		</select>
+
+		<label for="security">Seguridad</label>
+		<select name="ability" id="security" value="security">
+  		<option value="1">Usuario Básico</option>
+  		<option value="2">Usuario Independiente</option>
+  		<option value="3">Usuario Competente</option>
+
+		</select>
+
+		<label for="problemsolving">Resolución de Problemas</label>
+		<select name="ability" id="problemsolving" value="problemsolving">
+  		<option value="1">Usuario Básico</option>
+  		<option value="2">Usuario Independiente</option>
+  		<option value="3">Usuario Competente</option>
+
+		</select>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>Certiicados TIC</legend>
+		<label for="certifications">Cerificados TIC</label>
+		<input type="text" name="ability" id="certifications" value="certifications">
+
+					<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
+	</fieldset>
+
+		<label for="others"> Otras competencias informáticas</label>
+		<select name="ability" id="others" value="others">
+		<option value="1">Retoque fotográfico</option>
+  		<option value="2">Edición de vídeo</option>
+  		<option value="3">Análisis de redes sociales</option>
+
+		</select>
+
+		
+				<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón; también que al seleccionar una se puedan añadir más -->
+
+		<label for="file">Sube un fichero</label><input type="file" name="ability" id="file" value="file">
+	
+	</form>
+		
+</body>
+</html>

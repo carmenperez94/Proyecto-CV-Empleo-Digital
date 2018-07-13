@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <title>Educación y Formación</title>
+</head>
+<body>
+	<form>
+	<label for="initialdate">De</label><input type="date" name="newcv" id="initialdate" value="initialdate">
+	<label for="finaldate">A</label><input type="date" name="newcv" id="finaldate" value="finaldate">
+	<label for="current">Actualmente trabajo aquí</label><input type="checkbox" name="newcv" id="current" value="current">
+
+	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final (hay que hacerlo con Javascript) -->
+	<label for="certification">Título de la cualificación obtenida</label><input type="text" name="newcv" id="certification" value="certification">
+
+	<fieldset>
+	<legend>Organización que ha impartido la educación o la formación</legend>
+	<label for="educatorname">Nombre</label><input type="text" name="newcv" id="educatorname" value="educatorname">
+
+	<lable for="educatorlocation">Localidad</lable><input type="text" name="newcv" id="educatorlocation" value="educatorlocation">
+
+	<lable for="educatorcountry">País</lable>
+	<select name="newcv" id="educatorcountry" value="educatorcountry">
+  		<option value="spain">España</option>
+  		<option value="france">Francia</option>
+  		<option value="england">Inglaterra</option>
+  		<option value="germany">Alemania</option>
+	</select>
+
+	<label for="additional">Datos adicionales (únicamente si procede)</label><input type="checkbox" name="newcv" id="additional" value="additional">
+
+	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
+
+	<p id="educatordata" style="display:none">
+	<lable for="adress">Dirección</lable><input type="text" name="newcv" id="adress" value="adress">
+	<lable for="postalcode">Código Postal</lable><input type="number" name="newcv" id="postalcode" value="postalcode">
+	<lable for="web">Sitio Web</lable><input type="url" name="newcv" id="web" value="web">
+
+	</p>
+
+	<label for="level">Nivel EQF-MEC o nacional</label>
+	<select name="newcv" id="level" value="level">
+  		<option value="1">Nivel 1 EQF-MEC</option>
+  		<option value="2">Nivel 2 EQF-MEC</option>
+  		<option value="3">Nivel 3 EQF-MEC</option>
+  		<option value="4">Nivel 4 EQF-MEC</option>
+  		<option value="5">Nivel 5 EQF-MEC</option>
+  		<option value="6">Nivel 6 EQF-MEC</option>
+  		<option value="7">Nivel 7 EQF-MEC</option>
+  		<option value="8">Nivel 8 EQF-MEC</option>
+	</select>
+
+	<label for="classes">Principales materias cursadas y competencias profesionales adquiridas</label><input type="text" name="newcv" id="classes" value="classes">
+
+	<!-- Debería tener más opciones de texto como ocurre en la descripción del objetivo profesional de tipodeaplicacion.html -->	
+	<label for="complementary">Campos complementarios</label><input type="checkbox" name="newcv" id="complementary" value="complementary">
+
+	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
+
+	<p id="educatordata" style="display:none">
+		<select name="newcv" id="educatordata" value="educatordata">
+  		<option value="1">Informática</option>
+  		<option value="2">Humanidades</option>
+  		<option value="3">Artes</option>
+
+	</select>
+
+	<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
+
+	</p>
+
+	<label for="file">Sube un fichero</label><input type="file" name="newcv" id="file" value="file">
+
+
+	<input type="submit" value="Enviar">
+
+
+	
+	</form>
+		
+</body>
+</html>
