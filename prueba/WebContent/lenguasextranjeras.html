@@ -2,25 +2,31 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Lenguas Extranjeras</title>
 </head>
 <body>
 	<form>
+	<h1>Lenguas Extranjeras</h1>
+	<div class="form-group">
 		<label for="language">Idioma</label>
-		<select name="ability" id="language" value="language">
+		<select class="form-control" name="ability" id="language" value="language">
   		<option value="1">Español</option>
   		<option value="2">Alemán</option>
   		<option value="3">Inglés</option>
 
 		</select>
-
+	</div>
 		<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
 
 		<fieldset>
+		
 			<legend>Autoevaluación</legend>
-			<label for="understand">Comprender</label>
+			<div class="form-group">
+			<strong><label for="understand">Comprender</label></strong>
+			<br>
 			<label for="listen">Comprensión Auditiva</label>
 			<select name="ability" id="listen" value="listen">
   				<option value="1">A1</option>
@@ -42,8 +48,10 @@
   				<option value="6">C2</option>
 
 			</select>
-
-			<label for="speak">Hablar</label>
+	</div>
+	<div class="form-group">
+			<strong><label for="speak">Hablar</label></strong>
+			<br>
 			<label for="interaction">Interacción Oral</label>
 			<select name="ability" id="interaction" value="interaction">
   				<option value="1">A1</option>
@@ -65,8 +73,10 @@
   				<option value="6">C2</option>
 
 			</select>
-
-			<label for="write">Expresión Escrita</label>
+	</div>
+	<div class="form-group">
+			<strong><label for="write">Expresión Escrita</label></strong>
+			<br>
 			<label for="writing">Escribir</label>
 			<select name="ability" id="write" value="write">
   				<option value="1">A1</option>
@@ -77,25 +87,30 @@
   				<option value="6">C2</option>
 
 			</select>
+	</div>
 		</fieldset>
 
 		<fieldset>
+		<div class="form-group">
 			<legend><label for="certificate">Título(s) o certificado(s)</label></legend>
-			<input type="text" name="ability" id="certificate" value="certificate">
+			<input type="text" name="ability" id="certificate" value="">
 
 			<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
-
+		</div>
 		</fieldset>
 
-		<label for="file">Sube un fichero</label><input type="file" name="ability" id="file" value="file">
-
-
+		<div class="form-group">
+		<div class="custom-file">
+		<input type="file" class="custom-file-input" name="ability" id="file" value="file" lang="es">
+		<label class="custom-file-label" for="file">Sube un fichero</label>
+		</div>
+		</div>
+			<button type="submit" class="btn btn-secondary">Enviar</button>
 	
 	</form>
 
 	<!-- Al añadir un idioma deberíamos poder añadir otro/s con todos los campos otra vez de alguna manera -->
 
-	<input type="submit" value="Enviar">
 		
 </body>
 </html>

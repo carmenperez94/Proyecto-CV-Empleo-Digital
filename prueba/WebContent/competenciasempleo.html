@@ -2,14 +2,16 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Competencias relacionadas con el Empleo</title>
 </head>
 <body>
 	<form>
-	<label for="employment">Competencias relacionadas con el Empleo</label>
-		<select name="ability" id="employment" value="employment">
+	<div class="form-group">
+	<h1><label for="employment">Competencias relacionadas con el Empleo</label></h1>
+		<select class="form-control" name="ability" id="employment" value="employment">
   		<option value="1">Trabajo en equipo</option>
   		<option value="2">Liderazgo</option>
   		<option value="3">Cuidadoso con los detalles</option>
@@ -17,11 +19,16 @@
 		</select>
 
 				<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón; también que al seleccionar una se puedan añadir más -->
+	</div>
+<div class="form-group">
+		<div class="custom-file">
+		<input type="file" class="custom-file-input" name="ability" id="file" value="file" lang="es">
+		<label class="custom-file-label" for="file">Sube un fichero</label>
+		</div>
+		</div>		
 
-		<label for="file">Sube un fichero</label><input type="file" name="ability" id="file" value="file">
-	
 
-
+		<button type="submit" class="btn btn-secondary">Enviar</button>
 	
 	</form>
 		

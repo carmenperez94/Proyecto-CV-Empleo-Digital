@@ -2,24 +2,31 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Competencias Comunicativas</title>
 </head>
 <body>
-	<form>
-		<label for="communicative">Competencias Comunicativas</label>
-		<select name="ability" id="communicative" value="communicative">
+	<form class="needs-validation" novalidate>
+		<div class="form-group">
+		<h1><label for="communicative">Competencias Comunicativas</label></h1>
+		<select class=form-control name="ability" id="communicative" value="communicative">
   		<option value="1">Hablar en público</option>
   		<option value="2">Lenguaje no verbal</option>
   		<option value="3">Facilidad para la enseñanza</option>
 
 		</select>
+		</div>
 
 				<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón; también que al seleccionar una se puedan añadir más -->
-
-		<label for="file">Sube un fichero</label><input type="file" name="ability" id="file" value="file">
-	
+		<div class="form-group">
+		<div class="custom-file">
+		<input type="file" class="custom-file-input" name="ability" id="file" value="file" lang="es">
+		<label class="custom-file-label" for="file">Sube un fichero</label>
+		</div>
+		</div>
+			<button type="submit" class="btn btn-secondary">Enviar</button>
 	</form>
 		
 </body>

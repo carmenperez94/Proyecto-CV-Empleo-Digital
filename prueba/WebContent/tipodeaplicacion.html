@@ -2,26 +2,30 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Tipo de Aplicación</title>
 </head>
 <body>
 	<form>
+	<h1>Tipo de Aplicación</h1>
+	<div class="form-group">
 	<label for="applicationtype">Tipo de Solicitud</label>
-	<select name="newcv" id="applicationtype" value="applicationtype">
+	<select class="form-control" name="newcv" id="applicationtype" value="applicationtype">
   		<option value="1">Puesto Solicitado</option>
   		<option value="2">Función</option>
   		<option value="3">Empleo Deseado</option>
   		<option value="4">Estudios Requeridos</option>
   		<option value="5">Objetivo Profesional</option>
 	</select>
-
+	</div>
+	<div class="form-group">
 	<label for="description">Descripción</label>
 	<!-- Según la opción que se marque debería aparecer un tipo de input u otro. 1-select; 2-select; 3-select; 4-text; 5-text (este último con más opciones de texto para hacer una carta de presentación) -->
+	</div>
 
-
-	<input type="submit" value="Enviar">
+	<button type="submit" class="btn btn-secondary">Enviar</button>
 
 
 	

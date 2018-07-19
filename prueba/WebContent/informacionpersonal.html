@@ -2,18 +2,39 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Información Personal</title>
 </head>
 <body>
 	<form>
-	<label for="firstname">Nombre</label><input type="text" name="newcv" id="firstname" value="firstname">
-	<lable for="lastname">Apellidos</lable><input type="text" name="newcv" id="lastname" value="lastname">
-	<lable for="adress">Dirección</lable><input type="text" name="newcv" id="adress" value="adress">
-	<lable for="postalcode">Código Postal</lable><input type="number" name="newcv" id="postalcode" value="postalcode">
-	<lable for="location">Localidad</lable><input type="text" name="newcv" id="location" value="location">
-	<lable for="lastname">Apellidos</lable><input type="text" name="newcv" id="lastname" value="lastname">
+	<h1>Información Personal</h1>
+	<div class="form-group">
+	<label for="firstname">Nombre</label>
+	<input type="text" name="newcv" id="firstname" value="">
+	</div>
+	<div class="form-group">
+	<lable for="lastname">Apellidos</lable>
+	<input type="text" name="newcv" id="lastname" value="">
+	</div>
+	<div class="form-group">
+	<lable for="adress">Dirección</lable>
+	<input type="text" name="newcv" id="adress" value="">
+	</div>
+	<div class="form-group">
+	<lable for="postalcode">Código Postal</lable>
+	<input type="number" name="newcv" id="postalcode" value="">
+	</div>
+	<div class="form-group">
+	<lable for="location">Localidad</lable>
+	<input type="text" name="newcv" id="location" value="">
+	</div>
+	<div class="form-group">
+	<lable for="lastname">Apellidos</lable>
+	<input type="text" name="newcv" id="lastname" value="">
+	</div>
+	<div class="form-group">
 	<lable for="country">País</lable>
 	<select name="newcv" id="country" value="country">
   		<option value="spain">España</option>
@@ -21,44 +42,59 @@
   		<option value="england">Inglaterra</option>
   		<option value="germany">Alemania</option>
 	</select>
+	</div>
+	<div class="form-group">
 	<label for="phone">Teléfono(s)</label>
-	<select name="newcv" id="phonetype" value="phonetype">
+	<select name="newcv" id="phonetype" value="">
   		<option value="home">Domicilio</option>
   		<option value="work">Trabajo</option>
   		<option value="mobile">Móvil</option>
 	</select>
-	<input type="tel" name="newcv" id="phone" value="phone">
+	<input type="tel" name="newcv" id="phone" value="">
 
 	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
-
-	<lable for="email">email</lable><input type="email" name="newcv" id="email" value="email">
-	<lable for="web">Página web / Blog</lable><input type="url" name="newcv" id="web" value="web">
+	</div>
+	<div class="form-group">
+	<lable for="email">Email</lable>
+	<input type="email" name="newcv" id="email" value="">
+	</div>
+	<div class="form-group">
+	<lable for="web">Página web / Blog</lable>
+	<input type="url" name="newcv" id="web" value="">
 
 	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
-
+	</div>
+	<div class="form-group">
 	<label for="message">Mensajería Instantánea</label>
 	<select name="newcv" id="messagetype" value="messagetype">
   		<option value="google">Google Hangouts</option>
   		<option value="skype">Skype</option>
   		<option value="msn">MSN</option>
 	</select>
-	<input type="text" name="newcv" id="message" value="message">
-
-	<label for="complementary">Campos Complementarios</label><input type="checkbox" name="newcv" id="complementary" value="complementary">
+	<input type="text" name="newcv" id="message" value="">
+	</div>
+	
+	<div class="form-group">
+	<label for="complementary">Campos Complementarios</label>
+	<input type="checkbox" name="newcv" id="complementary" value="">
 
 	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
 
-	<p id="extra" style="display:none">
+	<div id="extra" style="display:none">
 		<div id="attentiontext1">Completar sólo si es necesario. Verifique las disposiciones locales con respecto a datos como edad, sexo, nacionalidad, etc. en el CV.</div>
 		<fieldset>
 			<legend>Sexo</legend>
-			<label for="men" name="newcv" id="men" value="men">Masculino</label><input type="radio" name="newcv" id="men" value="men">
-			<label for="women" name="newcv" id="women" value="women">Femenino</label><input type="radio" name="newcv" id="women" value="women">
-			<label for="other" name="newcv" id="other" value="other">Otro</label><input type="radio" name="newcv" id="other" value="other">
+			<label for="men" name="newcv" id="men" value="">Masculino</label>
+			<input type="radio" name="newcv" id="men" value="">
+			<label for="women" name="newcv" id="women" value="">Femenino</label>
+			<input type="radio" name="newcv" id="women" value="">
+			<label for="other" name="newcv" id="other" value="">Otro</label>
+			<input type="radio" name="newcv" id="other" value="">
 		</fieldset>
-		<label for="birthdate" name="newcv" id="birthdate" value="birthdate">Fecha de nacimiento</label><input type="date" name="newcv" id="birthdate" value="birthdate">
-		<label for="nationality" name="newcv" id="nationality" value="nationality">Nacionalidad</label>
-		<select name="newcv" id="nationality" value="nationality">
+		<label for="birthdate" name="newcv" id="birthdate" value="">Fecha de nacimiento</label>
+		<input type="date" name="newcv" id="birthdate" value="">
+		<label for="nationality" name="newcv" id="nationality" value="">Nacionalidad</label>
+		<select name="newcv" id="nationality" value="">
   		<option value="spanish">Española</option>
   		<option value="english">Inglesa</option>
   		<option value="german">Alemana</option>
@@ -66,11 +102,19 @@
 
 	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
 
-	</p>
+	</div>
+	</div>
+	<div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Acepto los términos y condiciones
+      </label>
+    </div>
+  </div>
 
 
-
-	<input type="submit" value="Enviar">
+	<button type="submit" class="btn btn-secondary">Enviar</button>
 
 
 	

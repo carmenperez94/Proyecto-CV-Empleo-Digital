@@ -2,68 +2,80 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Competencias Digitales</title>
 </head>
 <body>
+	<h1><label for="digital">Competencias Digitales</label></h1>
 	<form>
-	
+
 	<fieldset>
+		<div class="form-group">
 		<legend>Autoevaluación</legend>
-
+		</div>
+	<div class="form-group">
 		<label for="infotreatment">Tratamiento de la Información</label>
-		<select name="ability" id="infotreatment" value="infotreatment">
+		<select class="form-control" name="ability" id="infotreatment" value="infotreatment">
   		<option value="1">Usuario Básico</option>
   		<option value="2">Usuario Independiente</option>
   		<option value="3">Usuario Competente</option>
 
 		</select>
-
+	</div>
+	<div class="form-group">
 		<label for="communication">Comunicación</label>
-		<select name="ability" id="communication" value="communication">
+		<select class="form-control" name="ability" id="communication" value="communication">
   		<option value="1">Usuario Básico</option>
   		<option value="2">Usuario Independiente</option>
   		<option value="3">Usuario Competente</option>
 
 		</select>
-
+	</div>
+	<div class="form-group">
 		<label for="contentcreation">Creación de Contenido</label>
-		<select name="ability" id="contentcreation" value="contentcreation">
+		<select class="form-control" name="ability" id="contentcreation" value="contentcreation">
   		<option value="1">Usuario Básico</option>
   		<option value="2">Usuario Independiente</option>
   		<option value="3">Usuario Competente</option>
 
 		</select>
-
+	</div>
+	<div class="form-group">
 		<label for="security">Seguridad</label>
-		<select name="ability" id="security" value="security">
+		<select class="form-control" name="ability" id="security" value="security">
   		<option value="1">Usuario Básico</option>
   		<option value="2">Usuario Independiente</option>
   		<option value="3">Usuario Competente</option>
 
 		</select>
-
+	</div>
+	<div class="form-group">
 		<label for="problemsolving">Resolución de Problemas</label>
-		<select name="ability" id="problemsolving" value="problemsolving">
+		<select class="form-control" name="ability" id="problemsolving" value="problemsolving">
   		<option value="1">Usuario Básico</option>
   		<option value="2">Usuario Independiente</option>
   		<option value="3">Usuario Competente</option>
 
 		</select>
-
+	</div>
 	</fieldset>
 
 	<fieldset>
-		<legend>Certiicados TIC</legend>
+	<div class="form-group">
+		<legend>Certificados TIC</legend>
+	</div>
+	<div class="form-group">
 		<label for="certifications">Cerificados TIC</label>
-		<input type="text" name="ability" id="certifications" value="certifications">
+		<input type="text" name="ability" id="certifications" value="">
 
 					<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
+	</div>
 	</fieldset>
-
-		<label for="others"> Otras competencias informáticas</label>
-		<select name="ability" id="others" value="others">
+	<fieldset>
+	<div class="form-group">
+		<legend><label for="others"> Otras competencias informáticas</label></legend>
+		<select class="form-control" name="ability" id="others" value="others">
 		<option value="1">Retoque fotográfico</option>
   		<option value="2">Edición de vídeo</option>
   		<option value="3">Análisis de redes sociales</option>
@@ -72,8 +84,15 @@
 
 		
 				<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón; también que al seleccionar una se puedan añadir más -->
-
-		<label for="file">Sube un fichero</label><input type="file" name="ability" id="file" value="file">
+	</div>
+	</fieldset>
+		<div class="form-group">
+		<div class="custom-file">
+		<input type="file" class="custom-file-input" name="ability" id="file" value="file" lang="es">
+		<label class="custom-file-label" for="file">Sube un fichero</label>
+		</div>
+		</div>		
+		<button type="submit" class="btn btn-secondary">Enviar</button>
 	
 	</form>
 		

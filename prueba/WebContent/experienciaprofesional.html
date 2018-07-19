@@ -2,50 +2,61 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">                    <!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="custombootstrap.min.css">
         <title>Experiencia Profesional</title>
 </head>
 <body>
 	<form>
-	<label for="initialdate">De</label><input type="date" name="newcv" id="initialdate" value="initialdate">
-	<label for="finaldate">A</label><input type="date" name="newcv" id="finaldate" value="finaldate">
-	<label for="current">Actualmente trabajo aquí</label><input type="checkbox" name="newcv" id="current" value="current">
+	<h1>Experiencia Profesional</h1>
+	<div class="form-group">
+	<label for="initialdate">De</label>
+	<input type="date" name="newcv" id="initialdate" value="">
+	<label for="finaldate">A</label>
+	<input type="date" name="newcv" id="finaldate" value="">
+	<label for="current">Actualmente trabajo aquí</label>
+	<input type="checkbox" name="newcv" id="current" value="">
 
 	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final (hay que hacerlo con Javascript) -->
-
-	<label for="position" name="newcv" id="position" value="position">Puesto o cargo ocupados</label>
-		<select name="newcv" id="position" value="position">
+	</div>
+	<div class="form-group">
+	<label for="position" name="newcv" id="position" value="">Puesto o cargo ocupados</label>
+		<select name="newcv" id="position" value="">
   		<option value="1">Camarero</option>
   		<option value="2">Programador</option>
   		<option value="3">Músico</option>
 	</select>
 
 	<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
+	</div>
+	<div class="form-group">
 	<fieldset>
 	<legend>Empleador</legend>
-	<label for="employername">Nombre</label><input type="text" name="newcv" id="employername" value="employername">
+	<label for="employername">Nombre</label>
+	<input type="text" name="newcv" id="employername" value="">
 
-	<lable for="employerlocation">Localidad</lable><input type="text" name="newcv" id="employerlocation" value="employerlocation">
+	<lable for="employerlocation">Localidad</lable>
+	<input type="text" name="newcv" id="employerlocation" value="">
 
 	<lable for="employercountry">País</lable>
-	<select name="newcv" id="employercountry" value="employercountry">
+	<select name="newcv" id="employercountry" value="">
   		<option value="spain">España</option>
   		<option value="france">Francia</option>
   		<option value="england">Inglaterra</option>
   		<option value="germany">Alemania</option>
 	</select>
 
-	<label for="additional">Datos adicionales (únicamente si procede)</label><input type="checkbox" name="newcv" id="additional" value="additional">
+	<label for="additional">Datos adicionales (únicamente si procede)</label>
+	<input type="checkbox" name="newcv" id="additional" value="">
 
 	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
 
 	<p id="companydata" style="display:none">
-	<lable for="adress">Dirección</lable><input type="text" name="newcv" id="adress" value="adress">
-	<lable for="postalcode">Código Postal</lable><input type="number" name="newcv" id="postalcode" value="postalcode">
-	<lable for="web">Sitio Web</lable><input type="url" name="newcv" id="web" value="web">
+	<lable for="adress">Dirección</lable><input type="text" name="newcv" id="adress" value="">
+	<lable for="postalcode">Código Postal</lable><input type="number" name="newcv" id="postalcode" value="">
+	<lable for="web">Sitio Web</lable><input type="url" name="newcv" id="web" value="">
 	<lable for="sector">Sector de actividad</lable>
-	<select name="newcv" id="sector" value="sector">
+	<select name="newcv" id="sector" value="">
   		<option value="1">Educación</option>
   		<option value="2">Hostelería</option>
   		<option value="3">Construcción</option>
@@ -54,13 +65,20 @@
 	<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
 
 	</p>
-		<label for="activities">Principales actividades y responsabilidades</label><input type="text" name="newcv" id="activities" value="activities">
+		<label for="activities">Principales actividades y responsabilidades</label>
+		<textarea name="newcv" id="activities" value=""></textarea>
 
 	<!-- Debería tener más opciones de texto como ocurre en la descripción del objetivo profesional de tipodeaplicacion.html -->	
 	</fieldset>
-
-	<label for="file">Sube un fichero</label><input type="file" name="newcv" id="file" value="file">
-	<input type="submit" value="Enviar">
+	</div>
+	
+	<div class="form-group">
+		<div class="custom-file">
+		<input type="file" class="custom-file-input" name="ability" id="file" value="file" lang="es">
+		<label class="custom-file-label" for="file">Sube un fichero</label>
+		</div>
+		</div>		
+		<button type="submit" class="btn btn-secondary">Enviar</button>
 
 
 	
