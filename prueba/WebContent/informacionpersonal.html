@@ -76,7 +76,7 @@
 	
 	<div class="form-group">
 	<label for="complementary">Campos Complementarios</label>
-	<input type="checkbox" name="newcv" id="complementary" value="">
+	<input type="checkbox" name="newcv" id="complementary" value="" onclick="myFunction()">
 
 	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
 
@@ -103,6 +103,19 @@
 	<!-- Aquí faltaría que se pudieran añadir más campos con un botoncito de + (creo que se puede con jQuery) -->
 
 	</div>
+		<script>function myFunction() {
+		  // Get the checkbox
+		  var checkBox = document.getElementById("complementary");
+		  // Get the output text
+		  var text = document.getElementById("extra");
+
+		  // If the checkbox is checked, display the output text
+		  if (checkBox.checked == true){
+		    text.style.display = "block";
+		  } else {
+		    text.style.display = "none";
+		  }
+		}</script>
 	</div>
 	<div class="form-group">
     <div class="form-check">

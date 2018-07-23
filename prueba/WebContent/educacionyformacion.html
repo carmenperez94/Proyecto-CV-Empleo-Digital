@@ -4,6 +4,8 @@
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">                    <!-- Bootstrap CSS -->
     		<link rel="stylesheet" href="custombootstrap.min.css">
+    		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    		
         <title>Educación y Formación</title>
 </head>
 <body>
@@ -15,9 +17,17 @@
 	<label for="finaldate">A</label>
 	<input type="date" name="newcv" id="finaldate" value="">
 	<label for="current">Actualmente trabajo aquí</label>
-	<input type="checkbox" name="newcv" id="current" value="">
+	<input type="checkbox" name="newcv" id="current" value="enable" onclick="disabledDate()">
 	
-	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final (hay que hacerlo con Javascript) -->
+	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final-->
+	
+	<script> function disabledDate() {
+		
+	if (document.getElementById("current").checked == true){
+	    document.getElementById("finaldate").disabled = true;
+	  } else {
+		  document.getElementById("finaldate").disabled = false;
+	  }}</script>
 	</div>
 	<div class="form-group">
 	<label for="certification">Título de la cualificación obtenida</label>
@@ -41,9 +51,11 @@
 	</select>
 
 	<label for="additional">Datos adicionales (únicamente si procede)</label>
-	<input type="checkbox" name="newcv" id="additional" value="">
+	<input type="checkbox" name="newcv" id="additional" value="" onclick="myFunction()">
 
-	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
+	<!-- Con Javascript hacemos que el siguiente párrafo se muestre al marcar la checkbox -->
+	
+
 
 	<p id="educatordata" style="display:none">
 	<lable for="adress">Dirección</lable>
@@ -56,6 +68,20 @@
 	<input type="url" name="newcv" id="web" value="">
 
 	</p>
+	
+		<script>function myFunction() {
+		  // Get the checkbox
+		  var checkBox = document.getElementById("additional");
+		  // Get the output text
+		  var text = document.getElementById("educatordata");
+
+		  // If the checkbox is checked, display the output text
+		  if (checkBox.checked == true){
+		    text.style.display = "block";
+		  } else {
+		    text.style.display = "none";
+		  }
+		}</script>
 	</div>
 	<div class="form-group">
 	<label for="level">Nivel EQF-MEC o nacional</label>
@@ -79,18 +105,31 @@
 	</div>
 	<div class="form-group">
 	<label for="complementary">Campos complementarios</label>
-	<input type="checkbox" name="newcv" id="complementary" value="">
+	<input type="checkbox" name="newcv" id="complementary" value="" onclick="myFunction2()">
+	
 
 	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
 
-	<p id="educatordata" style="display:none">
-		<select name="newcv" id="educatordata" value="">
+	<p id="educatordata2" style="display:none">
+		<select name="newcv" id="educatordata2" value="">
   		<option value="1">Informática</option>
   		<option value="2">Humanidades</option>
   		<option value="3">Artes</option>
 
 	</select>
+	<script>function myFunction2() {
+		  // Get the checkbox
+		  var checkBox2 = document.getElementById("complementary");
+		  // Get the output text
+		  var text2 = document.getElementById("educatordata2");
 
+		  // If the checkbox is checked, display the output text
+		  if (checkBox2.checked == true){
+		    text2.style.display = "block";
+		  } else {
+		    text2.style.display = "none";
+		  }
+		}</script>
 	<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
 
 	</p>

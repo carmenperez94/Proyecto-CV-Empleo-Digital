@@ -12,17 +12,39 @@
 	<h1>Tipo de Aplicación</h1>
 	<div class="form-group">
 	<label for="applicationtype">Tipo de Solicitud</label>
-	<select class="form-control" name="newcv" id="applicationtype" value="applicationtype">
-  		<option value="1">Puesto Solicitado</option>
-  		<option value="2">Función</option>
-  		<option value="3">Empleo Deseado</option>
-  		<option value="4">Estudios Requeridos</option>
-  		<option value="5">Objetivo Profesional</option>
+	<select class="form-control" name="newcv" id="applicationtype" value="applicationtype" onchange="inputType()">
+  		<option id="1" onchange="inputType()">Puesto Solicitado</option>
+  		<option id="2" onchange="inputType()">Función</option>
+  		<option id="3" onchange="inputType()">Empleo Deseado</option>
+  		<option id="4" onchange="inputType()">Estudios Requeridos</option>
+  		<option id="5" onchange="inputType()">Objetivo Profesional</option>
 	</select>
 	</div>
 	<div class="form-group">
 	<label for="description">Descripción</label>
-	<!-- Según la opción que se marque debería aparecer un tipo de input u otro. 1-select; 2-select; 3-select; 4-text; 5-text (este último con más opciones de texto para hacer una carta de presentación) -->
+	<!--NO FUNCIONA: Según la opción que se marque debería aparecer un tipo de input u otro. 1-select; 2-select; 3-select; 4-text; 5-text (este último con más opciones de texto para hacer una carta de presentación) -->
+		
+		<select id="position" style="display:none"></select>
+		<select id="responsability" style="display:none"></select>
+		<select id="employment" style="display:none"></select>
+		<input type="text" id="studies" style="display:none">
+		<textarea id="objective" style="display:none"></textarea>
+		
+		<script> function inputType() {
+		
+	if (<option id> == "1") {
+		document.getElementById("position").style.display = "block";
+		} else if (<option id> == "2") {
+			document.getElementById("responsability").style.display = "block";
+		} else if (<option id> == "3") {
+			document.getElementById("employment").style.display = "block";
+		} else if (<option id> == "4") {
+			document.getElementById("studies").style.display = "block";
+		} else if (<option id> == "5") {
+			document.getElementById("objective").style.display = "block";
+		} }</script>
+		
+	
 	</div>
 
 	<button type="submit" class="btn btn-secondary">Enviar</button>

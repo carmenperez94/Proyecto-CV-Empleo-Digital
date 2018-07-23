@@ -15,9 +15,16 @@
 	<label for="finaldate">A</label>
 	<input type="date" name="newcv" id="finaldate" value="">
 	<label for="current">Actualmente trabajo aquí</label>
-	<input type="checkbox" name="newcv" id="current" value="">
+	<input type="checkbox" name="newcv" id="current" value="" onclick="disabledDate()">
 
-	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final (hay que hacerlo con Javascript) -->
+	<!-- Si se marca el checkbox current se deshabilita la opción de marcar fecha final -->
+		<script> function disabledDate() {
+		
+	if (document.getElementById("current").checked == true){
+	    document.getElementById("finaldate").disabled = true;
+	  } else {
+		  document.getElementById("finaldate").disabled = false;
+	  }}</script>
 	</div>
 	<div class="form-group">
 	<label for="position" name="newcv" id="position" value="">Puesto o cargo ocupados</label>
@@ -47,7 +54,7 @@
 	</select>
 
 	<label for="additional">Datos adicionales (únicamente si procede)</label>
-	<input type="checkbox" name="newcv" id="additional" value="">
+	<input type="checkbox" name="newcv" id="additional" value="" onclick="myFunction()">
 
 	<!-- Con Javascript haremos que el siguiente párrafo se muestre al marcar la checkbox -->
 
@@ -61,7 +68,19 @@
   		<option value="2">Hostelería</option>
   		<option value="3">Construcción</option>
 	</select>
+	<script>function myFunction() {
+		  // Get the checkbox
+		  var checkBox = document.getElementById("additional");
+		  // Get the output text
+		  var text = document.getElementById("companydata");
 
+		  // If the checkbox is checked, display the output text
+		  if (checkBox.checked == true){
+		    text.style.display = "block";
+		  } else {
+		    text.style.display = "none";
+		  }
+		}</script>
 	<!-- Aquí habría que vincular de alguna manera la base de datos con las opciones posibles ya que debe de haber un montón -->
 
 	</p>
